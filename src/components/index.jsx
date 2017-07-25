@@ -41,9 +41,9 @@ class HadronPluginInfo extends React.Component {
   }
 
   renderPlugins() {
-    return this.plugins.map((plugin) => {
+    return this.plugins.map((plugin, i) => {
       return (
-        <div>
+        <div key={`plugin-${i}`}>
           <div className="hadron-plugin-info-plugin">
             {this.renderPluginActivated(plugin)}
             <div className="hadron-plugin-info-plugin-name">
